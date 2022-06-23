@@ -7,7 +7,8 @@
     "start": "ts-node-dev --respawn src/index.ts",
     "start:once": "ts-node src/index.ts",
     "prebuild": "rm -rf build",
-    "build": "tsc --project ./tsconfig.proj1.json"
+    "build": "tsc --project ./tsconfig.proj1.json",
+    "build:watch": "tsc --watch --project ./tsconfig.proj1.json"
   },
   "keywords": [],
   "author": "",
