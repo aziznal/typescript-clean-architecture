@@ -12,5 +12,7 @@
         "noImplicitOverride": true,
         "noImplicitReturns": true,
         "forceConsistentCasingInFileNames": true
-    }
+    },
+
+    "files": [],
 }

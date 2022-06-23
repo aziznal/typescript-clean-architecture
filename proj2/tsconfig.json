@@ -1,0 +1,29 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "rootDir": ".",
+        "outDir": "./build/",
+        "declarationDir": "./types/",
+
+        "declaration": true,
+        "composite": true,
+
+        "declarationMap": true,
+        "tsBuildInfoFile": "build/.tsbuildinfo",
+
+        "paths": {
+            "require": ["tsconfig-paths/register"],
+            "@proj1/*": ["../proj1/*"]
+        },
+    },
+
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"],
+
+    "references": [
+        {
+            "path": "../proj1/"
+        }
+    ]
+}

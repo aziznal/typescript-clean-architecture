@@ -1,15 +1,17 @@
 {
     "extends": "../tsconfig.json",
     "compilerOptions": {
-        "rootDir": "src/",
-        "outDir": "build/",
-        "declarationDir": "types/",
+        "baseUrl": ".",
+        "module": "System",
+        "rootDir": "./src",
+        "outDir": "./build/",
+        "declarationDir": "./types/",
 
         "declaration": true,
         "composite": true,
 
         "declarationMap": true,
-        "tsBuildInfoFile": "build/.tsbuildinfo"
+        "tsBuildInfoFile": "build/proj1.tsbuildinfo"
     },
 
     "include": ["src/**/*"],
