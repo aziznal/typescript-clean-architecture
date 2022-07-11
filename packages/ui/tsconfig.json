@@ -24,7 +24,7 @@
     ],
 
     "paths": {
-      "@proj1/*": ["../proj1/*"]
+      "@domain/*": ["../domain/*"]
     }
   },
   "angularCompilerOptions": {
@@ -36,7 +36,7 @@
 
   "references": [
     {
-      "path": "../proj1/"
+      "path": "../domain/"
     }
   ]
 }

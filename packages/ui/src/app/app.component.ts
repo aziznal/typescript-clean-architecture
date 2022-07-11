@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Foo } from '@proj1/src/index';
+import { Foo } from '@domain/src/index';
 
 @Component({
   selector: 'app-root',

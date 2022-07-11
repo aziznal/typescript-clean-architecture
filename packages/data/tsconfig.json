@@ -1,5 +1,5 @@
 {
-    "extends": "../tsconfig.json",
+    "extends": "../../tsconfig.json",
     "compilerOptions": {
         "baseUrl": ".",
         "rootDir": ".",
@@ -14,7 +14,7 @@
 
         "paths": {
             "require": ["tsconfig-paths/register"],
-            "@proj1/*": ["../proj1/*"]
+            "@domain/*": ["../domain/*"]
         },
     },
 
@@ -23,7 +23,7 @@
 
     "references": [
         {
-            "path": "../proj1/"
+            "path": "../domain/"
         }
     ]
 }

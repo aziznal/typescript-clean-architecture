@@ -1,0 +1,16 @@
+{
+    "name": "root",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "npm run build --workspaces",
+        "start": "npm run build --workspaces && npm run start --workspace ui"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "workspaces": [
+        "./packages/*"
+    ]
+}
