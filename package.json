@@ -4,7 +4,11 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "validate-dependencies": "depcruise --config .dependency-cruiser.js .",
+        "validate-dependencies:show-graph": "depcruise --config .dependency-cruiser.js --output-type archi . | dot -T svg > dependencygraph.svg",
+        "prebuild": "npm run validate-dependencies",
         "build": "npm run build --workspaces",
+        "prestart": "npm run validate-dependencies",
         "start": "npm run build --workspaces && npm run start --workspace ui"
     },
     "keywords": [],
@@ -12,5 +16,8 @@
     "license": "ISC",
     "workspaces": [
         "./packages/*"
-    ]
+    ],
+    "devDependencies": {
+        "dependency-cruiser": "^11.11.0"
+    }
 }
