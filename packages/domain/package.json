@@ -7,7 +7,7 @@
         "start:once": "ts-node src/index.ts",
         "prebuild": "rm -rf build",
         "build": "tsc --build",
-        "build:watch": "tsc --watch --build"
+        "build:watch": "tsc --build --watch"
     },
     "keywords": [],
     "author": "",

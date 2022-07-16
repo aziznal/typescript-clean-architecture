@@ -23,6 +23,8 @@
       "dom"
     ],
 
+    "allowSyntheticDefaultImports": true,
+
     "paths": {
       "@domain/*": ["../domain/*"]
     }
