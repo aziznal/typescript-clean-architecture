@@ -1,9 +1,9 @@
 {
-    "name": "domain",
+    "name": "core",
     "version": "1.0.0",
     "description": "",
     "scripts": {
-        "start": "ts-node-dev --respawn src/index.ts",
+        "start": "npm run build:watch",
         "start:once": "ts-node src/index.ts",
         "prebuild": "rm -rf build",
         "build": "tsc --build",
@@ -15,7 +15,8 @@
     "devDependencies": {
         "@types/node": "^18.0.0",
         "ts-node": "^10.8.1",
-        "ts-node-dev": "^2.0.0",
         "typescript": "^4.7.4"
-    }
+    },
+    "types": "build/src/index.d.ts",
+    "main": "build/src/index.js"
 }

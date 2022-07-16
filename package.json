@@ -1,23 +1,9 @@
 {
     "name": "root",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "validate-dependencies": "depcruise --config .dependency-cruiser.js .",
-        "validate-dependencies:show-graph": "depcruise --config .dependency-cruiser.js --output-type archi . | dot -T svg > dependencygraph.svg",
-        "prebuild": "npm run validate-dependencies",
-        "build": "npm run build --workspaces",
-        "prestart": "npm run validate-dependencies",
-        "start": "npm run start --workspace ui"
-    },
-    "keywords": [],
-    "author": "",
     "license": "ISC",
-    "workspaces": [
-        "./packages/*"
-    ],
     "devDependencies": {
-        "dependency-cruiser": "^11.11.0"
+        "dependency-cruiser": "^11.11.0",
+        "lerna": "^5.1.8",
+        "nx": "^14.4.3"
     }
 }

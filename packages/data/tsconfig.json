@@ -12,19 +12,8 @@
 
         "declarationMap": true,
         "tsBuildInfoFile": "build/.tsbuildinfo",
-
-        "paths": {
-            "require": ["tsconfig-paths/register"],
-            "@domain/*": ["../domain/*"]
-        }
     },
 
     "include": ["src/**/*"],
     "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"],
-
-    "references": [
-        {
-            "path": "../domain/"
-        }
-    ]
 }

@@ -1,4 +1,4 @@
-import { Foo } from "@domain/src/index";
+import { Foo } from "core";
 
 const foo = new Foo();
 

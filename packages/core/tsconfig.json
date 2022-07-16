@@ -1,0 +1,20 @@
+{
+    "extends": "../../tsconfig.json",
+
+    "include": ["src/**/*.ts"],
+
+    "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"],
+
+    "compilerOptions": {
+        "baseUrl": ".",
+        "rootDir": ".",
+
+        "module": "ESNext",
+
+        "outDir": "build/",
+
+        "declaration": true,
+
+        "composite": true
+    }
+}
