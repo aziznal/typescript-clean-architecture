@@ -1,8 +1,13 @@
 {
-    "name": "root",
+    "name": "angular-clean-architecture",
     "license": "ISC",
+    "scripts": {
+        "prestart": "npm install && lerna bootstrap",
+        "start": "lerna run start",
+        "test": "lerna run test",
+        "build": "lerna run build"
+    },
     "devDependencies": {
-        "dependency-cruiser": "^11.11.0",
         "lerna": "^5.1.8",
         "nx": "^14.4.3"
     }
