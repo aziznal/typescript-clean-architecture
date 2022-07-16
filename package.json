@@ -9,7 +9,7 @@
         "prebuild": "npm run validate-dependencies",
         "build": "npm run build --workspaces",
         "prestart": "npm run validate-dependencies",
-        "start": "npm run build --workspaces && npm run start --workspace ui"
+        "start": "npm run start --workspace ui"
     },
     "keywords": [],
     "author": "",
