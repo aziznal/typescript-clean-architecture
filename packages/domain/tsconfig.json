@@ -2,16 +2,16 @@
     "extends": "../../tsconfig.json",
     "compilerOptions": {
         "baseUrl": ".",
-        "module": "System",
-        "rootDir": "./src",
+
+        "module": "CommonJS",
+        
         "outDir": "./build/",
-        "declarationDir": "./types/",
 
         "declaration": true,
         "composite": true,
 
         "declarationMap": true,
-        "tsBuildInfoFile": "build/proj1.tsbuildinfo"
+        "tsBuildInfoFile": "build/.tsbuildinfo"
     },
 
     "include": ["src/**/*"],

@@ -2,9 +2,10 @@
     "extends": "../../tsconfig.json",
     "compilerOptions": {
         "baseUrl": ".",
-        "rootDir": ".",
+
+        "module": "CommonJS",
+
         "outDir": "./build/",
-        "declarationDir": "./types/",
 
         "declaration": true,
         "composite": true,
@@ -15,7 +16,7 @@
         "paths": {
             "require": ["tsconfig-paths/register"],
             "@domain/*": ["../domain/*"]
-        },
+        }
     },
 
     "include": ["src/**/*"],
