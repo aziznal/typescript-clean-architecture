@@ -1,5 +1,3 @@
-import { IncrementCounterUsecase } from 'core';
-
 import { Component } from '@angular/core';
 
 @Component({
@@ -10,7 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
     title = 'hello-world';
 
-    constructor(private incrementCounterUsecase: IncrementCounterUsecase) {
-        this.incrementCounterUsecase.execute();
-    }
+    constructor() {}
 }
