@@ -5,7 +5,8 @@
         "prestart": "npm install && lerna bootstrap",
         "start": "lerna run start",
         "test": "lerna run test",
-        "build": "lerna run build"
+        "build": "lerna run build",
+        "graph": "nx graph"
     },
     "devDependencies": {
         "lerna": "^5.1.8",
