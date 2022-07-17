@@ -1,4 +1,6 @@
-export abstract class DecrementCounterUsecase {
+import { Usecase } from "src/base/usecase.model";
+
+export abstract class DecrementCounterUsecase implements Usecase<Promise<void>> {
     abstract execute():  Promise<void>;
 }
 
