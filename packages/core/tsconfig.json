@@ -6,8 +6,8 @@
     "exclude": ["node_modules"],
 
     "compilerOptions": {
-        "baseUrl": "./",
-        "rootDir": "./",
+        "baseUrl": ".",
+        "rootDir": ".",
 
         "module": "ES2020",
         "target": "ES2020",

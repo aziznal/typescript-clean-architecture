@@ -1,9 +1,9 @@
 {
     "extends": "../../tsconfig.json",
 
-    "include": ["src/**/*"],
+    "include": ["src/**/*.ts"],
 
-    "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"],
+    "exclude": ["node_modules"],
 
     "compilerOptions": {
         "baseUrl": ".",
