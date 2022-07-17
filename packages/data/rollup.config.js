@@ -10,7 +10,7 @@ const config = [
         plugins: [
             typescript(
                 {
-                    sourceMap: tsConfig.compilerOptions.sourceMap
+                    sourceMap: tsConfig.compilerOptions.sourceMap,
                 }
             )
         ]

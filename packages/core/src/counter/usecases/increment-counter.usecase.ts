@@ -1,13 +1,15 @@
-import { Usecase } from "src/base/usecase.model";
+import { Usecase } from 'src/base/usecase.model';
+
+import { CounterRepository } from '../counter.repository';
 
 export abstract class IncrementCounterUsecase implements Usecase<Promise<void>> {
     abstract execute():  Promise<void>;
 }
 
 export class IncrementCounterUsecaseImpl implements IncrementCounterUsecase {
-    constructor() {}
+    constructor(private counterRepo: CounterRepository) {}
 
-    execute(): Promise<void> {
-         throw new Error('Method not implemented.');
+    async execute(): Promise<void> {
+        await this.counterRepo.setCounter(1);
     }
 }

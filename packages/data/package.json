@@ -4,20 +4,23 @@
     "description": "",
     "scripts": {
         "start": "npm run build:watch",
-        "start:once": "ts-node src/index.ts",
-        "prebuild": "rm -rf build",
-        "build": "tsc",
-        "build:watch": "tsc --build --watch"
+        "build": "tsc && npm run rollup",
+        "build:watch": "nodemon -e ts --exec \"npm run build\" --ignore build/** --ignore tests/**",
+        "rollup": "rollup -c"
     },
-    "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
         "core": "*"
     },
     "devDependencies": {
+        "typescript": "^4.7.4",
         "@types/node": "^18.0.0",
-        "ts-node": "^10.8.1",
-        "typescript": "^4.7.4"
-    }
+        "nodemon": "^2.0.19",
+        "rollup": "^2.77.0",
+        "@rollup/plugin-typescript": "^8.3.3",
+        "rollup-plugin-dts": "4.2.2"
+    },
+    "main": "build/src/index.js",
+    "types": "build/src/index.d.ts"
 }
