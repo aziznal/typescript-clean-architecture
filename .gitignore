@@ -4,3 +4,4 @@
 
 # Dependency Cruiser Artifacts
 dependencygraph.svg
+*.log

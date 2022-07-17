@@ -1,5 +1,5 @@
-import { Foo } from "core";
+// import { Foo } from "core";
 
-const foo = new Foo();
+// const foo = new Foo();
 
-foo.sayHi();
+// foo.sayHi();

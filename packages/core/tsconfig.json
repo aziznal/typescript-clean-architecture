@@ -9,12 +9,19 @@
         "baseUrl": ".",
         "rootDir": ".",
 
-        "module": "ESNext",
+        "module": "ES2020",
+        "target": "ES2020",
 
         "outDir": "build/",
 
         "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
 
-        "composite": true
+        "plugins": [
+            {
+                "name": "@rollup/plugin-typescript"
+            }
+        ]
     }
 }

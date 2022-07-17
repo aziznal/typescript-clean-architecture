@@ -1,5 +1,1 @@
-export class Foo {
-    sayHi() {
-        console.log("hello world!!");
-    }
-}
+export * from './counter/index';

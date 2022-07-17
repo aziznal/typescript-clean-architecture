@@ -1,4 +1,4 @@
-import { Foo } from 'core';
+import { Counter, CounterRepository, DecrementCounterUsecase } from 'core';
 
 import { Component } from '@angular/core';
 
@@ -10,9 +10,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
     title = 'hello-world';
 
-    foo: Foo = new Foo();
+    foo!: CounterRepository;
 
-    constructor() {
-        this.foo.sayHi();
-    }
+    counter!: Counter;
+
+    decrementUsecase!: DecrementCounterUsecase;
+
+    constructor() {}
 }

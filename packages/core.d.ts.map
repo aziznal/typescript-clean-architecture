@@ -1,0 +1,1 @@
+{"version":3,"file":"core.d.ts","sourceRoot":"","sources":["core/src/index.ts","core/src/counter/counter-repository.interface.ts"],"names":[],"mappings":";ICAA,MAAM,CAAC,QAAQ,OAAO,iBAAiB;QACnC,QAAQ,CAAC,UAAU,IAAI,OAAO,CAAC,MAAM,CAAC;QAEtC,QAAQ,CAAC,UAAU,CAAC,UAAU,EAAE,MAAM,GAAG,IAAI;KAChD"}
