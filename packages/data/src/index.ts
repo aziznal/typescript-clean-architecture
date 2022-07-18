@@ -1,1 +1,2 @@
-export const Foo = 3;
+export * from "./common";
+export * from "./something";

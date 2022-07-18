@@ -13,6 +13,10 @@
             "path": "packages/data"
         },
         {
+            "name": "di",
+            "path": "packages/di"
+        },
+        {
             "name": "ui",
             "path": "packages/ui"
         }

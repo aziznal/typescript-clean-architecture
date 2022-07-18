@@ -3,8 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-        "start": "npm run build:watch",
-        "build": "tsc && npm run rollup",
+        "build": "tsc --project tsconfig.build.json && npm run rollup",
         "build:watch": "nodemon -e ts --exec \"npm run build\" --ignore build/** --ignore tests/**",
         "rollup": "rollup -c",
         "test": "jest",
