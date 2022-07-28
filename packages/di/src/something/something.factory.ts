@@ -2,7 +2,7 @@ import * as core from "core";
 import * as data from "data";
 
 export class SomethingFactory {
-    createSomethingRepository(
+    static createSomethingRepository(
         localStorageService: data.LocalStorageService,
         api: data.SomethingApi
     ): core.SomeRepository {
@@ -12,14 +12,18 @@ export class SomethingFactory {
         return new data.SomeRepositoryImpl(localDataSource, remoteDataSource);
     }
 
-    private createSomethingLocalDataSource(
+    private static createSomethingLocalDataSource(
         localStorageService: data.LocalStorageService
     ): data.SomethingLocalDataSource {
         return new data.SomethingLocalDataSourceImpl(localStorageService);
     }
 
-    private createSomethingRemoteDataSource(api: data.SomethingApi): data.SomethingRemoteDataSource {
+    private static createSomethingRemoteDataSource(api: data.SomethingApi): data.SomethingRemoteDataSource {
         return new data.SomethingRemoteDataSourceImpl(api);
+    }
+
+    static createGetSomethingUsecase(somethingRepository: core.SomeRepository): core.GetSomethingUsecase {
+        return new core.GetSomethingUsecaseImpl(somethingRepository);
     }
 }
 

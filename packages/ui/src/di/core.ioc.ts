@@ -1,9 +1,9 @@
 import * as core from 'core';
-import { LocalStorageService, SomethingApi, SomethingFactory } from 'di';
+import * as di from 'di';
 
 import { Provider } from '@angular/core';
 
-class LocalStorageServiceImpl implements LocalStorageService {
+class LocalStorageServiceImpl implements di.LocalStorageService {
     get(key: string) {
         return localStorage.getItem(key) as any;
     }
@@ -13,8 +13,8 @@ class LocalStorageServiceImpl implements LocalStorageService {
     }
 }
 
-class SomethingApiImpl implements SomethingApi {
-    private data = "Here is your data bro"
+class SomethingApiImpl implements di.SomethingApi {
+    private data = 'Here is your data bro';
 
     async getData(): Promise<any> {
         return this.data;
@@ -25,13 +25,16 @@ class SomethingApiImpl implements SomethingApi {
     }
 }
 
-// INJECT YOUR USECASES BRO!
-
 /** Inject dependencies here */
 export const CORE_IOC: Provider[] = [
     {
         provide: core.SomeRepository,
         useFactory: () =>
-            new SomethingFactory().createSomethingRepository(new LocalStorageServiceImpl(), new SomethingApiImpl()),
+            di.SomethingFactory.createSomethingRepository(new LocalStorageServiceImpl(), new SomethingApiImpl()),
+    },
+    {
+        provide: core.GetSomethingUsecase,
+        useFactory: (someRepo: core.SomeRepository) => di.SomethingFactory.createGetSomethingUsecase(someRepo),
+        deps: [core.SomeRepository],
     },
 ];
