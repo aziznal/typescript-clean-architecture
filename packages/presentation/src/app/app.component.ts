@@ -7,7 +7,7 @@ import { GetSomethingUsecase } from 'core';
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-    title = 'hello-world';
+    title = 'presentation';
 
     constructor(private getSomethingUsecase: GetSomethingUsecase) {
         this.getSomethingUsecase.execute().then((data) => {

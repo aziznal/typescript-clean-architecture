@@ -17,8 +17,8 @@
             "path": "packages/di"
         },
         {
-            "name": "ui",
-            "path": "packages/ui"
+            "name": "presentation",
+            "path": "packages/presentation"
         }
     ],
     "settings": {}
