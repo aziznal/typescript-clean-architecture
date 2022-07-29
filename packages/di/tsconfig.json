@@ -15,8 +15,6 @@
 
         "lib": ["ES6", "DOM"],
 
-        "types": ["reflect-metadata"],
-
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
 
