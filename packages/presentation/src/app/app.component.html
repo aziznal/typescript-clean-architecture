@@ -6,8 +6,6 @@
     <h2 style="margin-top: 2rem">Counters</h2>
 
     <div class="centered-column counter-list">
-        <div *ngFor="let counter of counters">
-            {{ counter.label }}
-        </div>
+        <app-counter *ngFor="let counter of counters" [data]="counter" style="width: 100%"></app-counter>
     </div>
 </div>

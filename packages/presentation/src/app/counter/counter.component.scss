@@ -1,0 +1,128 @@
+.counter {
+    width: 100%;
+    box-sizing: border-box;
+
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 6px;
+
+    padding: 1rem;
+
+    background-color: rgb(247, 247, 247);
+
+    box-shadow: 4px 4px 10px 0px rgba(227, 227, 227, 0.75);
+
+    .counter-label {
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        font-size: 1.15rem;
+        font-weight: bold;
+
+        button {
+            background-color: none;
+            border: none;
+            background: none;
+
+            transform: scale(1.7);
+
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.8);
+            }
+        }
+
+        input {
+            padding: 0.5rem;
+
+            border: 1px solid rgb(146, 146, 146);
+            border-radius: 3px;
+        }
+    }
+
+    .counter-amount {
+        margin-top: 1rem;
+
+        font-size: 2rem;
+    }
+
+    .counter-body {
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 1rem;
+    }
+
+    .counter-button {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 0.3rem;
+
+        & > button {
+            width: 100%;
+
+            background: none;
+            border: none;
+            border-radius: 6px;
+
+            padding: 0.6rem;
+
+            color: white;
+
+            transition: 150ms transform, 100ms background-color;
+
+            cursor: pointer;
+
+            &.decrement {
+                background-color: rgb(221, 70, 16);
+
+                &:hover:not([disabled]) {
+                    background-color: rgb(255, 104, 49);
+                }
+
+                &:disabled {
+                    background-color: rgb(182, 121, 99);
+                }
+            }
+
+            &.increment {
+                background-color: rgb(16, 129, 221);
+
+                &:hover:not([disabled]) {
+                    background-color: rgb(59, 161, 244);
+                }
+
+                &:disabled {
+                    background-color: rgb(147, 172, 192);
+                }
+            }
+
+            &:hover:not([disabled]) {
+                transform: scale(1.05);
+            }
+        }
+
+        & > input {
+            width: 90%;
+
+            border-radius: 6px;
+            border: 1px solid rgb(147, 147, 147);
+
+            padding: 0.3rem;
+
+            text-align: center;
+        }
+    }
+}

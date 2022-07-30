@@ -1,12 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import * as core from 'core';
 
 @Component({
     selector: 'app-counter',
     templateUrl: './counter.component.html',
     styleUrls: ['./counter.component.scss'],
 })
-export class CounterComponent implements OnInit {
-    constructor() {}
+export class CounterComponent {
+    @Input('data')
+    counter!: core.Counter;
 
-    ngOnInit(): void {}
+    isEditing: boolean = false;
+
+    switchToEditMode() {
+        this.isEditing = true;
+    }
+
+    applyEdits() {
+        this.isEditing = false;
+    }
 }
