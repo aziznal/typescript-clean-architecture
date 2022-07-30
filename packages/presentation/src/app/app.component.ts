@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { GetSomethingUsecase } from 'core';
 
 @Component({
     selector: 'app-root',
@@ -9,9 +8,5 @@ import { GetSomethingUsecase } from 'core';
 export class AppComponent {
     title = 'presentation';
 
-    constructor(private getSomethingUsecase: GetSomethingUsecase) {
-        this.getSomethingUsecase.execute().then((data) => {
-            console.log(data);
-        });
-    }
+    constructor() {}
 }
