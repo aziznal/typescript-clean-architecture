@@ -1,12 +1,20 @@
 import { Component } from '@angular/core';
 
+import * as core from 'core';
+
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-    title = 'presentation';
+    counters: core.Counter[] = [];
 
-    constructor() {}
+    constructor(private createCounterUsecase: core.CreateCounterUsecase) {}
+
+    createCounter(): void {
+        const newCounter = this.createCounterUsecase.execute();
+
+        this.counters.push(newCounter);
+    }
 }

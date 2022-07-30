@@ -1,0 +1,44 @@
+.centered-column {
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+
+    align-items: center;
+
+    padding: 2rem;
+}
+
+.create-counter-button {
+    width: fit-content;
+
+    padding-block: 1rem;
+    padding-inline: 1rem;
+
+    border: none;
+    color: white;
+
+    font-size: 1.25rem;
+
+    background-color: rgb(25, 129, 220);
+
+    cursor: pointer;
+
+    transition: 150ms transform, 100ms background-color;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active {
+        background-color: rgb(51, 154, 244);
+    }
+}
+
+.counter-list {
+    height: 600px;
+    width: 450px;
+
+    border: 1px solid rgb(172, 172, 172);
+    border-radius: 6px;
+}
