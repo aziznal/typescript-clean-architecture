@@ -92,6 +92,10 @@
                     background-color: rgb(255, 104, 49);
                 }
 
+                &:active:not([disabled]) {
+                    background-color: rgb(255, 126, 79);
+                }
+
                 &:disabled {
                     background-color: rgb(182, 121, 99);
                 }
@@ -102,6 +106,10 @@
 
                 &:hover:not([disabled]) {
                     background-color: rgb(59, 161, 244);
+                }
+
+                &:active:not([disabled]) {
+                    background-color: rgb(88, 180, 255);
                 }
 
                 &:disabled {

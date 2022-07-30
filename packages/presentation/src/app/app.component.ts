@@ -8,17 +8,12 @@ import * as core from 'core';
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-    counters: core.Counter[] = [
-        {
-            id: '123',
-            label: 'New Counter',
-            currentCount: 0,
-            decrementAmount: 1,
-            incrementAmount: 1,
-        },
-    ];
+    counters: core.Counter[] = [];
 
-    constructor(private createCounterUsecase: core.CreateCounterUsecase) {}
+    constructor(
+        private createCounterUsecase: core.CreateCounterUsecase,
+        private getAllCountersUsecase: core.GetAllCountersUsecase
+    ) {}
 
     ngOnInit() {
         this.loadCounters();
@@ -30,5 +25,7 @@ export class AppComponent implements OnInit {
         this.counters.push(newCounter);
     }
 
-    private loadCounters() {}
+    private loadCounters() {
+        this.counters = this.getAllCountersUsecase.execute();
+    }
 }

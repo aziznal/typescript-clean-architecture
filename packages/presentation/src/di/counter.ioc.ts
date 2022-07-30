@@ -14,4 +14,8 @@ export const CORE_IOC: Provider[] = [
         provide: core.CreateCounterUsecase,
         useFactory: () => counterFactory.getCreateCounterUsecase(),
     },
+    {
+        provide: core.GetAllCountersUsecase,
+        useFactory: () => counterFactory.getGetAllCountersUsecase(),
+    },
 ];
