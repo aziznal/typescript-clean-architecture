@@ -5,7 +5,11 @@
 
     <h2 style="margin-top: 2rem">Counters</h2>
 
+    <div class="counter-filter">
+        <input (keyup)="updateFilteredCounters(filterInput.value)" #filterInput />
+    </div>
+
     <div class="centered-column counter-list">
-        <app-counter *ngFor="let counter of counters" [data]="counter" style="width: 100%"></app-counter>
+        <app-counter *ngFor="let counter of filteredCounters" [data]="counter" style="width: 100%"></app-counter>
     </div>
 </div>

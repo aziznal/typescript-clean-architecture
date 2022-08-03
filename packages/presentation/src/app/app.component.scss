@@ -35,8 +35,27 @@
     }
 }
 
+.counter-filter {
+    margin-bottom: 1rem;
+
+    input {
+        width: 515px;
+
+        padding: 0.8rem;
+
+        font-size: 1rem;
+
+        box-sizing: border-box;
+
+        border: 1px solid rgb(112, 112, 112);
+        border-radius: 6px;
+
+        box-shadow: 4px 4px 10px 0px rgba(227, 227, 227, 0.75);
+    }
+}
+
 .counter-list {
-    height: 600px;
+    height: 500px;
     width: 450px;
 
     border: 1px solid rgb(172, 172, 172);
