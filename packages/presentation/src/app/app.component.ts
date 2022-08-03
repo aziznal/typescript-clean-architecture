@@ -11,6 +11,9 @@ export class AppComponent implements AfterViewInit {
     @ViewChild('filterInput')
     filterInputRef!: ElementRef<HTMLInputElement>;
 
+    @ViewChild('counterList')
+    counterListRef!: ElementRef<HTMLElement>;
+
     allCounters: core.Counter[] = [];
 
     filteredCounters: core.Counter[] = [];
@@ -34,12 +37,23 @@ export class AppComponent implements AfterViewInit {
         this.allCounters.push(newCounter);
 
         this.updateFilteredCounters();
+
+        this.scrollCounterListToBottom();
     }
 
     updateFilteredCounters(filter?: string) {
         if (!filter) filter = this.filterInputRef.nativeElement.value;
 
         this.filteredCounters = this.filterCountersUsecase.execute(this.allCounters, filter);
+    }
+
+    private scrollCounterListToBottom() {
+        setTimeout(() => {
+            this.counterListRef.nativeElement.scrollTo({
+                behavior: 'smooth',
+                top: this.counterListRef.nativeElement.scrollHeight,
+            });
+        })
     }
 
     private loadCounters() {

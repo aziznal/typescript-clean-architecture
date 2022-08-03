@@ -9,7 +9,7 @@
         <input (keyup)="updateFilteredCounters(filterInput.value)" #filterInput />
     </div>
 
-    <div class="centered-column counter-list">
+    <div class="centered-column counter-list" #counterList>
         <app-counter *ngFor="let counter of filteredCounters" [data]="counter" style="width: 100%"></app-counter>
     </div>
 </div>
