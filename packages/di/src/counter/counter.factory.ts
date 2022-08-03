@@ -15,4 +15,28 @@ export class CounterFactory {
     getGetAllCountersUsecase(): core.GetAllCountersUsecase {
         return new core.GetAllCountersUsecaseImpl(this.counterRepository);
     }
+
+    getIncrementCounterUsecase(): core.IncrementCounterUsecase {
+        return new core.IncrementCounterUsecaseImpl(this.counterRepository);
+    }
+
+    getDecrementCounterUsecase(): core.DecrementCounterUsecase {
+        return new core.DecrementCounterUsecaseImpl(this.counterRepository);
+    }
+
+    getUpdateIncrementCountUsecase(): core.UpdateIncrementAmountUsecase {
+        return new core.UpdateIncrementAmountUsecaseImpl(this.counterRepository);
+    }
+
+    getUpdateDecrementCountUsecase(): core.UpdateDecrementAmountUsecase {
+        return new core.UpdateDecrementAmountUsecaseImpl(this.counterRepository);
+    }
+
+    getAssignCounterLabelUsecase(): core.AssignCounterLabelUsecase {
+        return new core.AssignCounterLabelUsecaseImpl(this.counterRepository);
+    }
+
+    getFilterCountersByLabelUsecase(): core.FilterCountersByLabelUsecase {
+        return new core.FilterCountersByLabelUsecaseImpl();
+    }
 }

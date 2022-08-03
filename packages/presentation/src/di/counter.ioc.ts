@@ -18,4 +18,28 @@ export const CORE_IOC: Provider[] = [
         provide: core.GetAllCountersUsecase,
         useFactory: () => counterFactory.getGetAllCountersUsecase(),
     },
+    {
+        provide: core.IncrementCounterUsecase,
+        useFactory: () => counterFactory.getIncrementCounterUsecase(),
+    },
+    {
+        provide: core.DecrementCounterUsecase,
+        useFactory: () => counterFactory.getDecrementCounterUsecase(),
+    },
+    {
+        provide: core.UpdateIncrementAmountUsecase,
+        useFactory: () => counterFactory.getUpdateIncrementCountUsecase(),
+    },
+    {
+        provide: core.UpdateDecrementAmountUsecase,
+        useFactory: () => counterFactory.getUpdateDecrementCountUsecase(),
+    },
+    {
+        provide: core.AssignCounterLabelUsecase,
+        useFactory: () => counterFactory.getAssignCounterLabelUsecase(),
+    },
+    {
+        provide: core.FilterCountersByLabelUsecase,
+        useFactory: () => counterFactory.getFilterCountersByLabelUsecase(),
+    },
 ];

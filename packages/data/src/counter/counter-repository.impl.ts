@@ -24,6 +24,10 @@ export class CounterRepositoryImpl implements core.CounterRepository {
         }
     }
 
+    getCounter(counterId: string): core.Counter {
+        return JSON.parse(this.localStorageService.get(counterId));
+    }
+
     createCounter(counterInfo: core.Counter): core.Counter {
         this.localStorageService.set(counterInfo.id, JSON.stringify(counterInfo));
 
@@ -34,6 +38,10 @@ export class CounterRepositoryImpl implements core.CounterRepository {
 
     getAllCounters(): core.Counter[] {
         return this.counterIds.map((id) => this.getCounterById(id));
+    }
+
+    updateCounter(counter: core.Counter): void {
+        this.localStorageService.set(counter.id, JSON.stringify(counter));
     }
 
     private addCounterId(counterId: string): void {
