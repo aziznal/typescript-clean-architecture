@@ -11,9 +11,9 @@ export class UpdateDecrementAmountUsecaseImpl implements UpdateDecrementAmountUs
     constructor(private counterRepo: CounterRepository) {}
 
     execute(updatedCounter: Counter): void {
-        const newDecrementIsNegative = this.confirmIsNegative(updatedCounter.decrementAmount);
+        const newDecrementIsPositive = this.confirmIsPositive(updatedCounter.decrementAmount);
 
-        if (!newDecrementIsNegative) throw new Error('New decrement amount must be a negative number (< 0)');
+        if (!newDecrementIsPositive) throw new Error('New decrement amount must be a positive number (> 0)');
 
         this.counterRepo.updateCounter({
             ...updatedCounter,
@@ -21,7 +21,7 @@ export class UpdateDecrementAmountUsecaseImpl implements UpdateDecrementAmountUs
         });
     }
 
-    private confirmIsNegative(num: number): boolean {
-        return num < 0;
+    private confirmIsPositive(num: number): boolean {
+        return num > 0;
     }
 }

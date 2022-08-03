@@ -7,7 +7,7 @@
         </ng-container>
 
         <ng-template #labelInput>
-            <input [value]="counter.label" />
+            <input [value]="counter.label" [(ngModel)]="editedCounter.label" />
 
             <button (click)="applyEdits()">✅</button>
         </ng-template>
@@ -26,7 +26,7 @@
             </button>
 
             <ng-container *ngIf="isEditing">
-                <input />
+                <input [(ngModel)]="editedCounter.decrementAmount" min="0" type="number" />
             </ng-container>
         </div>
 
@@ -36,7 +36,7 @@
             </button>
 
             <ng-container *ngIf="isEditing">
-                <input [value]="counter.incrementAmount" />
+                <input [(ngModel)]="editedCounter.incrementAmount" min="0" type="number" />
             </ng-container>
         </div>
     </div>
