@@ -10,6 +10,11 @@
     </div>
 
     <div class="centered-column counter-list" #counterList>
-        <app-counter *ngFor="let counter of filteredCounters" [data]="counter" style="width: 100%"></app-counter>
+        <app-counter
+            *ngFor="let counter of filteredCounters"
+            [data]="counter"
+            (deleteClicked)="deleteCounter($event)"
+            style="width: 100%"
+        ></app-counter>
     </div>
 </div>

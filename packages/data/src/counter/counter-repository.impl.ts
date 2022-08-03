@@ -44,6 +44,12 @@ export class CounterRepositoryImpl implements core.CounterRepository {
         this.localStorageService.set(counter.id, JSON.stringify(counter));
     }
 
+    deleteCounter(counterId: string): void {
+        this.localStorageService.set(counterId, "");
+
+        this.counterIds = this.counterIds.filter((id) => id !== counterId);
+    }
+
     private addCounterId(counterId: string): void {
         this.counterIds = [...this.counterIds, counterId];
     }

@@ -20,6 +20,8 @@ export class AppComponent implements AfterViewInit {
 
     constructor(
         private createCounterUsecase: core.CreateCounterUsecase,
+        private deleteCounterUsecase: core.DeleteCounterUsecase,
+
         private getAllCountersUsecase: core.GetAllCountersUsecase,
 
         private filterCountersUsecase: core.FilterCountersByLabelUsecase,
@@ -47,13 +49,25 @@ export class AppComponent implements AfterViewInit {
         this.filteredCounters = this.filterCountersUsecase.execute(this.allCounters, filter);
     }
 
+    deleteCounter(deletedCounterId: string) {
+        const deleteConfirmed = confirm('Are you sure you want to delete this counter?');
+
+        if (!deleteConfirmed) return;
+
+        this.deleteCounterUsecase.execute(deletedCounterId);
+
+        this.allCounters = this.allCounters.filter((counter) => counter.id !== deletedCounterId);
+
+        this.updateFilteredCounters();
+    }
+
     private scrollCounterListToBottom() {
         setTimeout(() => {
             this.counterListRef.nativeElement.scrollTo({
                 behavior: 'smooth',
                 top: this.counterListRef.nativeElement.scrollHeight,
             });
-        })
+        });
     }
 
     private loadCounters() {

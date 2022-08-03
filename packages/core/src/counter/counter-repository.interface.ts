@@ -1,4 +1,4 @@
-import { Counter } from "./entities/counter.entity";
+import { Counter } from './entities/counter.entity';
 
 export abstract class CounterRepository {
     abstract getCounter(counterId: string): Counter;
@@ -8,4 +8,6 @@ export abstract class CounterRepository {
     abstract getAllCounters(): Counter[];
 
     abstract updateCounter(counter: Counter): void;
+
+    abstract deleteCounter(counterId: string): void;
 }

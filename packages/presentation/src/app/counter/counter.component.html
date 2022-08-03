@@ -3,7 +3,13 @@
         <ng-container *ngIf="!isEditing; else labelInput">
             <span>{{ counter.label }}</span>
 
-            <button (click)="switchToEditMode()">🔧</button>
+            <div>
+                <button (click)="switchToEditMode()">🔧</button>
+
+                &nbsp;
+
+                <button (click)="emitDeleteEvent()">❌</button>
+            </div>
         </ng-container>
 
         <ng-template #labelInput>

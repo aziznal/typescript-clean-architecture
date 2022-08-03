@@ -1,6 +1,6 @@
 import * as core from 'core';
 
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
     selector: 'app-counter',
@@ -10,6 +10,9 @@ import { Component, Input } from '@angular/core';
 export class CounterComponent {
     @Input('data')
     counter!: core.Counter;
+
+    @Output()
+    deleteClicked = new EventEmitter<string>();
 
     editedCounter!: core.Counter;
 
@@ -55,6 +58,10 @@ export class CounterComponent {
         this.decrementCounterUsecase.execute(this.counter);
 
         this.counter.currentCount -= this.counter.decrementAmount;
+    }
+
+    emitDeleteEvent() {
+        this.deleteClicked.emit(this.counter.id);
     }
 
     private updateLabel() {
