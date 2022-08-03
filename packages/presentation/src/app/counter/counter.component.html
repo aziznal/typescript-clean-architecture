@@ -21,7 +21,9 @@
 
     <div class="counter-body" style="margin-top: 1rem">
         <div class="counter-button" style="width: 20%">
-            <button class="decrement" [disabled]="isEditing">dec -{{ counter.decrementAmount }}</button>
+            <button class="decrement" [disabled]="isEditing" (click)="decrementCounter()">
+                dec -{{ counter.decrementAmount }}
+            </button>
 
             <ng-container *ngIf="isEditing">
                 <input />
@@ -29,7 +31,9 @@
         </div>
 
         <div class="counter-button" style="width: 20%">
-            <button class="increment" [disabled]="isEditing">inc +{{ counter.incrementAmount }}</button>
+            <button class="increment" [disabled]="isEditing" (click)="incrementCounter()">
+                inc +{{ counter.incrementAmount }}
+            </button>
 
             <ng-container *ngIf="isEditing">
                 <input [value]="counter.incrementAmount" />
