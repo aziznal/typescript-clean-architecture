@@ -8,7 +8,9 @@ A typescript project template using clean architecture
 3. Done
 
 ## How to use
-You can read [this article](https://medium.com/@aziznal/27c7eb745ab4) explaining my idea of how this article can be used
+You can read [this article](https://medium.com/@aziznal/27c7eb745ab4) explaining my idea of how this article can be used.
+
+Also, see the [counter-example](https://github.com/aziznal/typescript-clean-architecture/tree/counter-example) branch to see different layers in action together.
 
 The project structure is splt into three main layers (core, data, presentation), as well as one auxiliary layer (di).
 
