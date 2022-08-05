@@ -1,20 +1,3 @@
-<div class="centered-column">
-    <div>
-        <button class="create-counter-button" (click)="createCounter()">Create Counter +</button>
-    </div>
-
-    <h2 style="margin-top: 2rem">Counters</h2>
-
-    <div class="counter-filter">
-        <input (keyup)="updateFilteredCounters(filterInput.value)" #filterInput />
-    </div>
-
-    <div class="centered-column counter-list" #counterList>
-        <app-counter
-            *ngFor="let counter of filteredCounters"
-            [data]="counter"
-            (deleteClicked)="deleteCounter($event)"
-            style="width: 100%"
-        ></app-counter>
-    </div>
-</div>
+<h1>
+    Hello World!
+</h1>
