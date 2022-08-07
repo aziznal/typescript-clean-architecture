@@ -1,3 +1,3 @@
-export abstract class Usecase<T> {
-    abstract execute(...args: any[]): T;
+export interface Usecase<T> {
+    execute(...args: any[]): T;
 }
