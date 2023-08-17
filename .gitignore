@@ -2,6 +2,9 @@
 **/build
 **/types
 
+**/yarn.lock
+**/package-lock.json
+
 # Dependency Cruiser Artifacts
 dependencygraph.svg
 *.log
