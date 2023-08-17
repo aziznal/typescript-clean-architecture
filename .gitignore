@@ -8,3 +8,4 @@
 # Dependency Cruiser Artifacts
 dependencygraph.svg
 *.log
+packages/presentation/src/___angular-example
