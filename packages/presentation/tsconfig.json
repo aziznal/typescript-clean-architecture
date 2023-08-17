@@ -1,34 +1,27 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-    "include": ["src/**/*.ts"],
-
-    "compileOnSave": false,
     "compilerOptions": {
-        "baseUrl": "./",
-        "outDir": "./dist/out-tsc",
-        "forceConsistentCasingInFileNames": true,
+        "target": "es5",
+        "lib": [
+          "dom",
+          "dom.iterable",
+          "esnext"
+        ],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
         "strict": true,
-        "noImplicitOverride": true,
-        "noPropertyAccessFromIndexSignature": true,
-        "noImplicitReturns": true,
+        "forceConsistentCasingInFileNames": true,
         "noFallthroughCasesInSwitch": true,
-        "sourceMap": true,
-        "declaration": false,
-        "downlevelIteration": true,
-        "experimentalDecorators": true,
+        "module": "esnext",
         "moduleResolution": "node",
-        "importHelpers": true,
-        "target": "es2020",
-        "module": "es2020",
-        "lib": ["es2020", "dom"],
-
-        "allowSyntheticDefaultImports": true
-    },
-
-    "angularCompilerOptions": {
-        "enableI18nLegacyMessageIdFormat": false,
-        "strictInjectionParameters": true,
-        "strictInputAccessModifiers": true,
-        "strictTemplates": true
-    }
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "experimentalDecorators": true
+      },
+      "include": [
+        "src"
+      ]
 }
